@@ -45,6 +45,7 @@ export interface TagAliases {
     fileType?: TagFrames.FileType,
     fileUrl?: TagFrames.FileUrl,
     genre?: TagFrames.Genre,
+    generalObject?: TagFrames.GeneralObject[],
     /**
      * An Image definition or an image Buffer or an image filename.
      * @see {@link TagFrames.Image}
@@ -109,6 +110,7 @@ export interface TagIdentifiers {
     COMR?: TagAliases["commercialFrame"]
     CTOC?: TagAliases["tableOfContents"]
     ETCO?: TagAliases["eventTimingCodes"]
+    GEOB?: TagAliases["generalObject"]
     POPM?: TagAliases["popularimeter"]
     PRIV?: TagAliases["private"]
     SYLT?: TagAliases["synchronisedLyrics"]

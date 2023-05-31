@@ -4,6 +4,7 @@ import { COMM } from './frame-comm'
 import { COMR } from './frame-comr'
 import { CTOC } from './frame-ctoc'
 import { ETCO } from './frame-etco'
+import { GEOB } from './frame-geob'
 import { POPM } from './frame-popm'
 import { PRIV } from './frame-priv'
 import { SYLT } from './frame-sylt'
@@ -19,6 +20,7 @@ export const Frames = {
     COMR,
     CTOC,
     ETCO,
+    GEOB,
     POPM,
     PRIV,
     SYLT,

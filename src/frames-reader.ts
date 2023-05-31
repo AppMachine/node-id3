@@ -37,7 +37,12 @@ function convertFramesToTags(
         const frameId = frame.identifier as keyof TagIdentifiers
         const isMultiple = getFrameOptions(frameId).multiple
         const makeValue = isMultiple ? pushValue : getValue
-        tags[frameId] = makeValue(tags[frameId], frame.getValue()) as never
+        if (frameId === 'GEOB') {
+            tags[frameId] = tags[frameId] || []
+            tags[frameId]?.push(makeValue(tags[frameId], frame.getValue()) as never)
+        } else {
+            tags[frameId] = makeValue(tags[frameId], frame.getValue()) as never
+        }
         return tags
     }, {})
 

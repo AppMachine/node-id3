@@ -858,3 +858,13 @@ export type CommercialFrame = {
         picture: string | Buffer
     }
 }
+
+/**
+ *
+ * @public
+ */
+export type GeneralObject = {
+    mimeType?: string,
+    ownerIdentifier?: string,
+    data: Buffer
+}
